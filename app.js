@@ -1,13 +1,16 @@
 // ===== EmailJS Configuration =====
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_uamjaln";
+const EMAILJS_TEMPLATE_ID = "template_jrvelis";
+const EMAILJS_PUBLIC_KEY = "_BOAjL4FnOVyXVgCO";
 
 // Arrays
 let sentEmails = JSON.parse(localStorage.getItem("sentEmails")) || [];
 let draftEmails = JSON.parse(localStorage.getItem("draftEmails")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ===== Initialize EmailJS =====
+  emailjs.init(EMAILJS_PUBLIC_KEY);
 
   // ===== Form Elements =====
   const form = document.getElementById("compose-form");
